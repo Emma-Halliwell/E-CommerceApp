@@ -1,0 +1,14 @@
+{
+  "name": "e-commerceapp",
+  "version": "1.0.0",
+  "description": "Codecagemy project to create ademy project to E-Commerce App REST API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emma Halliwell",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
