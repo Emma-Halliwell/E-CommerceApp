@@ -17,6 +17,8 @@ app.get('/', (request, response) => {
 
 app.get('/users', db.getUsers);
 
+app.get('/fitness', db.getFitness);
+
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)
 });
