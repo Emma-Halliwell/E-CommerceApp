@@ -9,15 +9,11 @@ const pool = new Pool({
     port: process.env.PGPORT,
 });
 
-// const getUsers = (req, res) => {
-//     pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
-//         if (error) {
-//             console.log('Error has occured');
-//         } else {
-//             res.status(200).json(results.rows);
-//         }
-//     });
-// };
+const register = (req, res) => {
+    pool.query('SELECT * FROM users', (error, results) => {
+        res.status(200).json(results.rows);
+    });
+};
 
 // Price - Routes for CRUD operations - Table price
 const getPrice = (req, res) => {
@@ -381,7 +377,7 @@ const deleteFootball = (req, res) => {
 };
 
 module.exports = {
-    // getUsers,
+    register,
     getPrice,
     getPriceById,
     createPrice,
